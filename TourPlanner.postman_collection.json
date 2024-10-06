@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "d0d651e1-9402-40ec-bb81-3478a4bbb090",
+		"name": "TourPlanner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33297852"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "postPerson1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test\",\n  \"email\": \"test@test.com\",\n  \"age\": 69\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/person",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postPerson2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"age\": 30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/person",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPersons",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/person",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tour",
+			"item": [
+				{
+					"name": "postTour1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Wanderweg\",\n  \"description\": \"Wandern und Bergsteigen\",\n  \"startLocation\": \"Start\",\n  \"endLocation\": \"Gipfel\",\n  \"transportType\": \"Fussexpress\",\n  \"tourDistance\": 9,\n  \"estimatedTime\": \"PT4H30M\",\n  \"routeImagePath\": \"/images/mountain.png\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postTour2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Radweg\",\n  \"description\": \"Radfahren\",\n  \"startLocation\": \"Start\",\n  \"endLocation\": \"Ziel\",\n  \"transportType\": \"Rad\",\n  \"tourDistance\": 20,\n  \"estimatedTime\": \"PT5H\",\n  \"routeImagePath\": \"/images/bike.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTours",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putTour",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Wanderweg_update\",\n  \"description\": \"Wandern und Bergsteigen_update\",\n  \"startLocation\": \"Start\",\n  \"endLocation\": \"Gipfel\",\n  \"transportType\": \"Fussexpress\",\n  \"tourDistance\": 9,\n  \"estimatedTime\": \"PT3H\",\n  \"routeImagePath\": \"/images/mountain_update.png\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTour1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTour1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTours Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/tour",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tour"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
