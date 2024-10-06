@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from "react";
+import LeafletMap from "./components/LeafletMap";
 import TourForm from "./components/TourForm";
 import TourList from "./components/TourList";
 import TourDetails from "./components/TourDetails";
