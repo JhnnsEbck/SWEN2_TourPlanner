@@ -4,7 +4,7 @@ import com.example.jpademo.persistence.entities.AddressEntity;
 import com.example.jpademo.persistence.entities.PersonEntity;
 import com.example.jpademo.persistence.repositories.AddressRepository;
 import com.example.jpademo.persistence.repositories.PersonRepository;
-import com.example.jpademo.api.Map_api;
+import com.example.jpademo.api.MapApi;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +23,7 @@ class swen2tourplannerTests {
     @Autowired
     private AddressRepository addressRepository;
     @Autowired
-    private Map_api mapApi;
+    private MapApi mapApi;
 
     @Test
     void contextLoads() {

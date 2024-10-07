@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "address")
-public interface Map_api {
+public interface MapApi {
 
 
     @GetMapping("/search/{text}")

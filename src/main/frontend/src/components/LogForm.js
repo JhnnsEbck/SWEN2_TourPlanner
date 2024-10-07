@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const LogForm = ({ tourId }) => {
+const LogForm = ({ tourId, onCreateLog }) => {
     const [timestamp, setTimestamp] = useState('');
     const [comment, setComment] = useState('');
     const [difficulty, setDifficulty] = useState(1);
@@ -38,6 +38,7 @@ const LogForm = ({ tourId }) => {
                 setTotalDistance('');
                 setTotalTime('');
                 setRating(1);
+                onCreateLog(response.data); // Neuen Log zur Liste hinzufügen
             } else {
                 alert('Failed to create log');
             }

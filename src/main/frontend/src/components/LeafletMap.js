@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+/*import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -25,7 +25,29 @@ const Map = ({ coordinates }) => {
         }
     }, [coordinates]);
 
-    return <div id="map" style={{ height: "100vh", width: "100%" }}></div>;
+    return <div id="map" style={{ position: 'fixed', top: 0, left: 0, height: "100vh", width: "100vw", zIndex: 1 }}></div>;
 };
 
 export default Map;
+*/
+
+import React from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
+const LeafletMap = () => {
+    const position = [48.2082,16.3738];
+
+    return (
+        <div style={{ height: '100%', width: '100%' }}>
+            <MapContainer center={position} zoom={13} style={{ height: '100%', width: '100%' }}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+            </MapContainer>
+        </div>
+    );
+};
+
+export default LeafletMap;
