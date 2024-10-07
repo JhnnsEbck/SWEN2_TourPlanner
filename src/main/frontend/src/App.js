@@ -1,27 +1,24 @@
 import './App.css';
 import React, { useState } from "react";
+import LeafletMap from "./components/LeafletMap";
+import 'leaflet/dist/leaflet.css';
+
 import TourForm from "./components/TourForm";
 import TourList from "./components/TourList";
-//import TourDetails from "./components/TourDetails";
-//import TourUpdate from "./components/TourUpdate";
 import LogList from "./components/LogList";
 import LogForm from "./components/LogForm";
 //import LogUpdate from "./components/LogUpdate";
-import LeafletMap from "./components/LeafletMap";
-import 'leaflet/dist/leaflet.css';
+//import TourDetails from "./components/TourDetails";
+//import TourUpdate from "./components/TourUpdate";
+
 
 const App = () => {
     const [tours, setTours] = useState([]);
     const [selectedTour, setSelectedTour] = useState(null);
-    const [/*selectedTourId*/, setSelectedTourId] = useState(null);
+    const [setSelectedTourId] = useState(null);
     const [creatingTour, setCreatingTour] = useState(false);
-    const [/*editingTour*/, setEditingTour] = useState(false);
-    //const [activeTab, setActiveTab] = useState('details');
-    //const [displayLogForm, setDisplayLogForm] = useState(false);
-    //const [editingLog, setEditingLog] = useState(false);
-    //const [selectedLog, setSelectedLog] = useState(null);
+    const [setEditingTour] = useState(false);
     const [logs, setLogs] = useState([]);
-    //const [coordinates, setCoordinates] = useState([]);
     const [expandedTourIds, setExpandedTourIds] = useState([]); // Array für die IDs der ausgeklappten Touren
 
     // Funktion zum Erstellen einer neuen Tour
@@ -66,53 +63,6 @@ const App = () => {
         setSelectedTour(updatedTour);
         setEditingTour(false);
     };
-/*
-    // Funktion zum Bearbeiten einer Tour
-    const handleEditTour = () => {
-        setEditingTour(true);
-    };
-    const handleCancelUpdate = () => {
-        setEditingTour(false);
-    };
-
-    const handleCreateLogButtonClick = () => {
-        setDisplayLogForm(true);
-    };
-
-    const handleEditLog = (log) => {
-        setEditingLog(true);
-        setSelectedLog(log);
-    };
-
-    const handleCancelUpdateLog = () => {
-        setEditingLog(false);
-        setSelectedLog(null);
-    };
-
-    const handleUpdateLog = (updatedLog) => {
-        setLogs(logs.map(log => (log.id === updatedLog.id ? updatedLog : log)));
-        setEditingLog(false);
-        setSelectedLog(null);
-    };
-
-    let displayComponent;
-    if (creatingTour) {
-        displayComponent = <TourForm onCreateTour={handleCreateTour} />;
-    } else if (editingTour) {
-        displayComponent = <TourUpdate tour={selectedTour} onUpdateTour={handleUpdateTour} onCancel={handleCancelUpdate} />;
-    } else if (selectedTour) {
-        if (activeTab === 'details') {
-            displayComponent = <TourDetails tour={selectedTour} onDelete={() => handleDeleteTour(selectedTour.id)} onEdit={handleEditTour} />;
-        } else if (activeTab === 'logs') {
-            if (displayLogForm) {
-                displayComponent = <LogForm tourId={selectedTour.id} />;
-            } else if (editingLog && selectedLog) {
-                displayComponent = <LogUpdate log={selectedLog} onCancelLog={handleCancelUpdateLog} onUpdateLog={handleUpdateLog} />;
-            } else {
-                displayComponent = <LogList tourId={selectedTour.id} onDisplayLogForm={handleCreateLogButtonClick} onEditLog={handleEditLog} />;
-            }
-        }
-    }*/
 
     return (
         <div>
