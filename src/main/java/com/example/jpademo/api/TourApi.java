@@ -49,5 +49,4 @@ public class TourApi {
         return ResponseEntity.ok().build();
     }
 
-
 }

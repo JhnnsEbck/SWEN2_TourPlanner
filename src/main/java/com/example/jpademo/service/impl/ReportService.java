@@ -33,7 +33,8 @@ public class ReportService {
     public String createTourReport(String target, TourDto tour, java.util.List<TourLogDto> logs) throws IOException {
         String basePath = getClass().getClassLoader().getResource("").getPath(); // Get base path of resources
         System.out.println(basePath);
-        String completeTarget = basePath + "../../src/main/java/com/example/jpademo/persistence/report_files/" + target;
+        String completeTarget = basePath + "../../src/main/java/com/example/jpademo/persistence/pdf_files/" + target;
+
         PdfWriter writer = new PdfWriter(completeTarget);
         PdfDocument pdf = new PdfDocument(writer);
         Document document = new Document(pdf);
@@ -61,7 +62,7 @@ public class ReportService {
         document.add(list);
 
         //tour logs
-        Paragraph tableHeader = new Paragraph("Tour logs")
+        /*Paragraph tableHeader = new Paragraph("Tour logs")
                 .setFont(PdfFontFactory.createFont(StandardFonts.TIMES_ROMAN))
                 .setFontSize(18)
                 .setBold()
@@ -79,7 +80,7 @@ public class ReportService {
             table.addCell(String.valueOf(log.getTotalDistance()));
         }
         document.add(table);
-        document.close();
+        document.close();*/
         return completeTarget;
     }
 

@@ -1,6 +1,6 @@
 package com.example.jpademo.service.impl;
 
-import com.example.jpademo.api.Map_api;
+import com.example.jpademo.api.MapApi;
 import com.example.jpademo.persistence.entities.TourEntity;
 import lombok.SneakyThrows;
 import org.json.JSONArray;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MapApiImpl implements Map_api {
+public class MapApiImpl implements MapApi {
 
     private static final String API_KEY = "5b3ce3597851110001cf624846203adf1286454dbbb676c6f68ec13d";
 

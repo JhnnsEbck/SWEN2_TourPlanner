@@ -76,22 +76,27 @@ const TourDetails = ({ tour, onDelete, onEdit }) => {
             <h3>{tour.name}</h3>
             <p>{tour.description}</p>
             <div>
-                <h4>From:</h4>
-                <p>{tour.startLocation}</p>
+                <b>From:</b><p>{tour.startLocation}</p>
             </div>
             <div>
-                <h4>To:</h4>
-                <p>{tour.endLocation}</p>
+                <b>To:</b><p>{tour.endLocation}</p>
             </div>
-            <p>Transport Type: {tour.transportType}</p>
-            <p>Distance: {tour.tourDistance} m</p>
-            <p>Estimated Time: {tour.estimatedTime} minutes</p>
-            <p>Popularity: {getPopularityString(tour.popularity)}</p>
-            <p>Child Friendliness: {getChildFriendlinessString(tour.childFriendliness)}</p>
-            <button onClick={onEdit} style={{marginRight: '10px'}}>Update Tour</button>
-            <button onClick={onDeleteTour}>Delete Tour</button>
-            <br/>
-            <button onClick={onCreateTourReport} style={{marginRight: '10px', marginTop: '10px'}}>Create Tour-Report</button>
+            <div>
+                <b>Transport Type:</b> {tour.transportType}
+            </div>
+            <div>
+                <b>Distance:</b> {tour.tourDistance} m
+            </div>
+            <div>
+                <b>Estimated Time:</b> {tour.estimatedTime} minutes
+            </div>
+            <div>
+                <b>Popularity:</b> {getPopularityString(tour.popularity)}
+            </div>
+            <div class={"formButtons"}>
+                <button onClick={onDeleteTour}>Delete Tour</button>
+                <button onClick={onCreateTourReport} style={{marginRight: '10px', marginTop: '10px'}}>Create Tour-Report</button>
+            </div>
             <button onClick={onCreateSummaryReport} style={{marginTop: '10px'}}>Create Summarize-Report</button>
         </div>
     );
